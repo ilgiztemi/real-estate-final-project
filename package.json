@@ -1,0 +1,8 @@
+{
+  "name": "real-estate-final-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/ilgiztemi/real-estate-final-project.git",
+  "author": "Ilgiz Temi <temirbekov91@gmail.com>",
+  "license": "MIT"
+}

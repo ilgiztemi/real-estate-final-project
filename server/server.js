@@ -20,7 +20,6 @@ express()
     next();
   })
   .use(morgan("tiny"))
-  .use(express.static("./server/assets"))
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
