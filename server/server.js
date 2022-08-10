@@ -23,9 +23,6 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
-  .get("/", (req, res) => {
-    res.send("Hello World!");
-  })
   .use(require('./endpoints/addsEndpoints'))
 
   // Node spins up our server and sets it to listen on set port
