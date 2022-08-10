@@ -6,7 +6,7 @@
         "street": "5503 Av. Smart",
         "city": "Côte-Saint-Luc",
         "province": "Quebec",
-        "postal-code": "H4W2M2",
+        "postal_code": "H4W2M2",
         "bedrooms": "2",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -18,7 +18,7 @@
         "street": "963-967 Av. Davaar",
         "city": "Montréal (Outremont)",
         "province": "Quebec",
-        "postal-code": "H2V3B7",
+        "postal_code": "H2V3B7",
         "bedrooms": "3",
         "bathrooms": "1",
         "agency": "Final Project Agency"
@@ -30,7 +30,7 @@
         "street": "2300 Rue Wilfrid-Reid",
         "city": "Montréal (Saint-Laurent)",
         "province": "Quebec",
-        "postal-code": "H4R0N6",
+        "postal_code": "H4R0N6",
         "bedrooms": "2",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -42,7 +42,7 @@
         "street": "5503 Av. Smart",
         "city": "Côte-Saint-Luc",
         "province": "Quebec",
-        "postal-code": "H4W2M2",
+        "postal_code": "H4W2M2",
         "bedrooms": "2",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -54,7 +54,7 @@
         "street": "2038 Rue De Bullion",
         "city": "Montréal (Ville-Marie)",
         "province": "Quebec",
-        "postal-code": "H2X3Z3",
+        "postal_code": "H2X3Z3",
         "bedrooms": "2",
         "bathrooms": "1",
         "agency": "Final Project Agency"
@@ -66,7 +66,7 @@
         "street": "5503 Av. Smart",
         "city": "Côte-Saint-Luc",
         "province": "Quebec",
-        "postal-code": "H4W2M2",
+        "postal_code": "H4W2M2",
         "bedrooms": "2",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -78,7 +78,7 @@
         "street": "6269Z 3e Avenue",
         "city": "Montréal (Rosemont/La Petite-Patrie)",
         "province": "Quebec",
-        "postal-code": "H1Y2X6",
+        "postal_code": "H1Y2X6",
         "bedrooms": "4",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -90,7 +90,7 @@
         "street": "363 Rue St-Hubert",
         "city": "Montréal (Ville-Marie)",
         "province": "Quebec",
-        "postal-code": "H2L0A8",
+        "postal_code": "H2L0A8",
         "bedrooms": "1",
         "bathrooms": "1",
         "agency": "Final Project Agency"
@@ -102,7 +102,7 @@
         "street": "8540 Rue Raymond-Pelletier",
         "city": "Montréal (Ahuntsic-Cartierville)",
         "province": "Quebec",
-        "postal-code": "H2M0A1",
+        "postal_code": "H2M0A1",
         "bedrooms": "1",
         "bathrooms": "2",
         "agency": "Final Project Agency"
@@ -114,7 +114,7 @@
         "street": "11 Rue Charlevoix",
         "city": "Montréal (Le Sud-Ouest)",
         "province": "Quebec",
-        "postal-code": "H3J2V9",
+        "postal_code": "H3J2V9",
         "bedrooms": "4",
         "bathrooms": "2",
         "agency": "Final Project Agency"

@@ -26,6 +26,7 @@ express()
   .get("/", (req, res) => {
     res.send("Hello World!");
   })
+  .use(require('./endpoints/addsEndpoints'))
 
   // Node spins up our server and sets it to listen on set port
   .listen(PORT, () => console.log(`Listening on port ${PORT}`));

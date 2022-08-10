@@ -1,11 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
+import { AddsProvider } from "./context/AddsContext";
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <AddsProvider>
+            <Router>
+                <Auth0Provider
+                    domain={domain}
+                    clientId={clientId}
+                    redirectUri={window.location.origin}
+                >
+                    <App />
+                </Auth0Provider>
+            </Router>
+        </AddsProvider>
+    </React.StrictMode>
 );
-

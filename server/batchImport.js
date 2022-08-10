@@ -13,13 +13,13 @@ const adds = require("./data/data.json");
 
 const uploadAdds = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
-  // try {
+  try {
     await client.connect();
     const db = client.db("real_estate");
-    await db.collection("adds").insertOne({user: "test"});
-  // } catch (error) {
-  //   console.log(error);
-  // }
+    await db.collection("adds").insertMany(adds);
+  } catch (error) {
+    console.log(error);
+  }
   client.close();
 };
 uploadAdds();

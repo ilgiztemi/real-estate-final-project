@@ -1,10 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import Profile from "./Profile";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div>
-      <h1>App</h1>
-    </div>
-  );
+
+    return (
+        <main>
+            <Navbar />
+            <Profile />
+        </main>
+    );
 }
 
 export default App;
