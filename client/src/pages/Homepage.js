@@ -1,7 +1,14 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Homepage = () => {
+    const { isAuthenticated } = useAuth0();
+    const navigate = useNavigate();
+    if (isAuthenticated) {
+        navigate("/profile");
+    }
     return (
         <Div>
             <TopDiv>
@@ -30,7 +37,10 @@ const Homepage = () => {
                 <MainDiv>
                     <AddsDiv>
                         <div>
-                            <img src="https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="img" />
+                            <img
+                                src="https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="img"
+                            />
                             <p>ARCHITECTURE</p>
                             <h3>CAVE RESIDENCE</h3>
                             <p>
@@ -40,7 +50,10 @@ const Homepage = () => {
                             <button>Learn More</button>
                         </div>
                         <div>
-                            <img src="https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="img" />
+                            <img
+                                src="https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="img"
+                            />
                             <p>INTERIOR</p>
                             <h3>VEGA COTTAGE</h3>
                             <p>
@@ -50,7 +63,10 @@ const Homepage = () => {
                             <button>Learn More</button>
                         </div>
                         <div>
-                            <img src="https://images.pexels.com/photos/7031608/pexels-photo-7031608.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img" />
+                            <img
+                                src="https://images.pexels.com/photos/7031608/pexels-photo-7031608.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="img"
+                            />
                             <p>LANDSCAPE</p>
                             <h3>AGUANTAO HOUSE</h3>
                             <p>
@@ -64,9 +80,17 @@ const Homepage = () => {
                         <div>
                             <h4>PALAZZI UNIVERSITY</h4>
                             <h1>COMMUNITY CENTER</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi ullam enim officiis ad vitae officia perferendis tempora doloremque a.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Obcaecati commodi ullam enim
+                                officiis ad vitae officia perferendis tempora
+                                doloremque a.
+                            </p>
                         </div>
-                        <img src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="img" />
+                        <img
+                            src="https://images.pexels.com/photos/2883049/pexels-photo-2883049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="img"
+                        />
                     </BottomDiv>
                 </MainDiv>
             </SecondDiv>
@@ -167,11 +191,11 @@ const AddsDiv = styled.div`
             width: 100%;
             line-height: 20px;
             border: none;
-            background-color: #CCCCFF;
+            background-color: #ccccff;
             color: #fff;
             text-transform: uppercase;
             &:hover {
-                color: #6082B6;
+                color: #6082b6;
                 cursor: pointer;
             }
         }
@@ -180,7 +204,6 @@ const AddsDiv = styled.div`
 const MainDiv = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    
 `;
 const BottomDiv = styled.div`
     border-radius: 10px;
@@ -189,7 +212,7 @@ const BottomDiv = styled.div`
     flex-flow: row nowrap;
     height: 400px;
     div {
-        background-color: #6082B6;
+        background-color: #6082b6;
         color: #fff;
         padding: 10px;
         h4 {
@@ -202,5 +225,5 @@ const BottomDiv = styled.div`
         width: 100%;
         height: 100%;
     }
-`
+`;
 export default Homepage;

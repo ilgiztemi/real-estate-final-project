@@ -2,12 +2,17 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 
 const initialState = {
     adds: null,
-    barFlag: false
+    barFlag: false,
+    page: 0,
+    perPage: 3
 }
 const reducer = (state, action) => {
     switch(action.type) {
         case 'add-all-adds': {
             return {...state, adds: action.data}
+        }
+        case 'page': {
+            return {...state, page: action.index}
         }
         default:
             throw new Error(`Unrecognized action: ${action.type}`);
@@ -25,9 +30,15 @@ const addAllAddsFn = (data) => {
         ...data
     })
 }
+const paginate = (el, index) => {
+    dispatch({
+        type: "page",
+        index,
+    });
+};
 console.log(state)
     return(
-        <AddsContext.Provider value={{state}}>
+        <AddsContext.Provider value={{state, actions: {paginate}}}>
             {children}
         </AddsContext.Provider>
     )

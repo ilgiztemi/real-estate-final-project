@@ -20,7 +20,7 @@ const Div = styled.div`
     height: 100px;
     color: whitesmoke;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
