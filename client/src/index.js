@@ -8,17 +8,17 @@ const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <AddsProvider>
-            <Router>
-                <Auth0Provider
-                    domain={domain}
-                    clientId={clientId}
-                    redirectUri={window.location.origin}
-                >
-                    <App />
-                </Auth0Provider>
-            </Router>
-        </AddsProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <AddsProvider>
+      <Router>
+        <Auth0Provider
+          domain={domain}
+          clientId={clientId}
+          redirectUri={window.location.origin}
+        >
+          <App />
+        </Auth0Provider>
+      </Router>
+    </AddsProvider>
+  </React.StrictMode>
 );

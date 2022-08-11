@@ -11,24 +11,24 @@ import Services from "./pages/Services";
 import SingleAdd from "./pages/SingleAdd";
 
 function App() {
-    return (
-        <Main>
-            <GlobalStyle />
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/adds" element={<Adds />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/:add" element={<SingleAdd />} />
-            </Routes>
-            <Footer />
-        </Main>
-    );
+  return (
+    <Main>
+      <GlobalStyle />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/adds" element={<Adds />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/:add" element={<SingleAdd />} />
+      </Routes>
+      <Footer />
+    </Main>
+  );
 }
 const Main = styled.main`
-    min-width: 100vw;
-    min-height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
 `;
 export default App;

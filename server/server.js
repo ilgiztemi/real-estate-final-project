@@ -23,7 +23,7 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
-  .use(require('./endpoints/addsEndpoints'))
+  .use(require("./endpoints/addsEndpoints"))
 
   // Node spins up our server and sets it to listen on set port
   .listen(PORT, () => console.log(`Listening on port ${PORT}`));
