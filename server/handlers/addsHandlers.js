@@ -64,6 +64,7 @@ const addNewAdd = async (req, res) => {
       bedrooms: req.body.bedrooms,
       bathrooms: req.body.bathrooms,
       agency: req.body.agency,
+      center: req.body.center
     };
     await db.collection("adds").insertOne(add);
     sendResponse(res, 201, add, "An add was created");
@@ -97,6 +98,7 @@ const updateAdd = async (req, res) => {
           bedrooms: req.body.bedrooms,
           bathrooms: req.body.bathrooms,
           agency: req.body.agency,
+          center: req.body.center
         },
       }
     );
@@ -116,12 +118,9 @@ const deleteAdd = async (req, res) => {
     await client.connect();
     const db = client.db(dbName);
 
-    const _id = parseInt(req.body.id);
-    const add = await db.collection("adds").findOne();
+    const _id = parseInt(req.body._id);
 
-    const result = await db
-      .collection("adds")
-      .findOneAndDelete({ _id: add._id });
+    const result = await db.collection("adds").findOneAndDelete({ _id: _id });
     result.value
       ? sendResponse(res, 200, result.value, `an add was found, id : ${_id}`)
       : sendResponse(
@@ -140,4 +139,6 @@ module.exports = {
   getAdds,
   getAdd,
   addNewAdd,
+  updateAdd,
+  deleteAdd,
 };

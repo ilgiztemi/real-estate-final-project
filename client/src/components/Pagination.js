@@ -8,7 +8,7 @@ const Pagination = () => {
     actions: { paginate },
   } = useAdds();
   let number = [];
-  let total = adds ? adds.length : 0;
+  let total = adds ? adds.length + 3 : 0;
   for (let i = 1; i < Math.ceil(total / perPage); i++) {
     number.push(i);
   }

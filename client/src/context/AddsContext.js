@@ -30,13 +30,22 @@ export const AddsProvider = ({ children }) => {
     fetch("/api/adds")
       .then((res) => res.json())
       .then((data) => addAllAddsFn(data));
-  }, []);
+  }, [state.adds]);
   const addAllAddsFn = (data) => {
     dispatch({
       type: "add-all-adds",
       ...data,
     });
   };
+  const deleteAnAdd = (_id) => {
+    fetch("/api/delete", {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({_id})
+    })
+  }
   const tabsHandler = (data) => {
     dispatch({
       type: "tabs",
@@ -55,7 +64,6 @@ export const AddsProvider = ({ children }) => {
     fetch("/api/add/add", {
         method: 'POST',
         headers: {
-            Authorization: 'Bearer abcdxyz',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -68,14 +76,17 @@ export const AddsProvider = ({ children }) => {
             province: e.target[5].value,
             bathrooms: e.target[6].value,
             bedrooms: e.target[7].value,
-            agency: 'Final Project Agency'
+            agency: 'Final Project Agency',
+            center: {
+                lat: parseFloat(e.target[8].value),
+                lng: parseFloat(e.target[9].value)
+            }
         }),
     })
-    console.log(e.target[0].value)
   }
   console.log(state);
   return (
-    <AddsContext.Provider value={{ state, actions: { paginate, tabsHandler, handleSubmitForm } }}>
+    <AddsContext.Provider value={{ state, actions: { paginate, tabsHandler, handleSubmitForm, deleteAnAdd } }}>
       {children}
     </AddsContext.Provider>
   );

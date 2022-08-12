@@ -9,6 +9,7 @@ import { useAdds } from "../context/AddsContext";
 import { TbBed } from "react-icons/tb";
 import { TbBath } from "react-icons/tb";
 import { AiOutlineFileAdd } from "react-icons/ai";
+import Map from "../components/Map";
 const Adds = () => {
   const {
     state: { adds, page, perPage, tabs },
@@ -90,7 +91,7 @@ const Adds = () => {
         )}
         {tabs === "maps" && (
           <div>
-            <h1>Maps</h1>
+            <Map />
           </div>
         )}
         {tabs === "summary" && (
@@ -100,7 +101,8 @@ const Adds = () => {
         )}
         {tabs === "add" && (
           <div>
-            <form onSubmit={(e) => handleSubmitForm(e)}>
+            <StyledForm onSubmit={(e) => {handleSubmitForm(e); tabsHandler("gallery")}}>
+              <h1>Create An Add</h1>
               <div>
                 <input type="text" placeholder="Image url..." />
                 <label>Image Url</label>
@@ -133,8 +135,16 @@ const Adds = () => {
                 <input type="text" placeholder="Bedrooms..." />
                 <label>Bedrooms</label>
               </div>
+              <div>
+                <input type="text" placeholder="Lattitude..." />
+                <label>Latitude</label>
+              </div>
+              <div>
+                <input type="text" placeholder="Longitude..." />
+                <label>Longitude</label>
+              </div>
               <button type="submit">SUBMIT</button>
-            </form>
+            </StyledForm>
           </div>
         )}
       </>
@@ -222,4 +232,51 @@ const BottomDiv = styled.div`
     }
   }
 `;
+const StyledForm = styled.form`
+  border: 1px solid lightblue;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 10px;
+  h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px;
+  }
+  div {
+    width: 90%;
+    margin: auto;
+    input {
+      color: #101010;
+      width: 60%;
+      outline: none;
+      border: none;
+      line-height: 25px;
+      padding-left: 10px;
+      border-radius: 5px;
+    }
+    label {
+      margin-left: 10px;
+      color: azure;
+    }
+  }  
+  button {
+      line-height: 35px;
+      width: 90%;
+      margin: auto;
+      border: none;
+      border-radius: 10px;
+      background-color: #008080;
+      color: azure;
+      font-size: 20px;
+      &:hover {
+        cursor: pointer;
+        background-color: #40E0D0;
+      }
+    }
+`
 export default Adds;
