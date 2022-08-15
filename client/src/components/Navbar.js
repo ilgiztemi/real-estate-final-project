@@ -1,6 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
-// import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import LoginButton from "../LoginButton";
@@ -22,7 +21,6 @@ const Navbar = () => {
       )}
 
       <Input type="text" placeholder="Search..." />
-      {/* <FaBars /> */}
       <LoginButton />
       <LogoutButton />
     </Div>

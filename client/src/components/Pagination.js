@@ -17,7 +17,7 @@ const Pagination = () => {
     <Div>
       <ul>
         {number.map((el, ind) => (
-          <li key={el} onClick={() => paginate(el, ind)}>
+          <li key={el} onClick={() => paginate(ind)}>
             {el}
           </li>
         ))}

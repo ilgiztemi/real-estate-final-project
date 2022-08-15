@@ -12,8 +12,8 @@ const SingleAdd = () => {
   const { add } = useParams();
   const navigate = useNavigate();
   const {
-    state: { adds },
-    actions: { deleteAnAdd },
+    state: { adds, edit, editAdd },
+    actions: { deleteAnAdd, editAddFn, handleEditInput },
   } = useAdds();
   if (!adds) {
     return (
@@ -36,30 +36,71 @@ const SingleAdd = () => {
                 </ImgDiv>
 
                 <div>
-                  <h4>{el.price}</h4>
-                  <h3>House for sale</h3>
-                  <p>{el.street}</p>
-                  <p>{el.city}</p>
+                  {edit ? (
+                    <>
+                      <input
+                        value={editAdd.price}
+                        type="text"
+                        placeholder="Price..."
+                        onChange={handleEditInput("price")}
+                      />
+                      <h3>House for sale</h3>
+                      <input
+                        value={editAdd.street}
+                        type="text"
+                        placeholder="Street..."
+                        onChange={handleEditInput("street")}
+                      />
+                      <input
+                        value={editAdd.city}
+                        type="text"
+                        placeholder="City..."
+                        onChange={handleEditInput("city")}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <h4>{el.price}</h4>
+                      <h3>House for sale</h3>
+                      <p>{el.street}</p>
+                      <p>{el.city}</p>
+                    </>
+                  )}
                   <BottomDiv>
                     <div>
                       <TbBed style={{ fontSize: "40px" }} />
                       <span>{el.bedrooms}</span>
                     </div>
                     <div>
-                      <TbBath style={{ fontSize: "40px" }} />
+                      <TbBath style={{ fontSize: "35px" }} />
                       <span>{el.bathrooms}</span>
                     </div>
-                    <div onClick={() => console.log("edit button")}>
-                      <FiEdit style={{ fontSize: "40px" }} />
-                      <span>Edit</span>
-                    </div>
+                    {!edit ? (
+                      <div onClick={() => editAddFn(el)}>
+                        <FiEdit style={{ fontSize: "30px" }} />
+                        <span>Edit</span>
+                      </div>
+                    ) : (
+                      <div onClick={() => editAddFn(el)}>
+                        <FiEdit style={{ fontSize: "30px" }} />
+                        <button
+                          style={{
+                            border: "none",
+                            background: "inherit",
+                            fontSize: "20px",
+                          }}
+                        >
+                          Save
+                        </button>
+                      </div>
+                    )}
                     <div
                       onClick={() => {
                         deleteAnAdd(el._id);
                         navigate("/adds");
                       }}
                     >
-                      <AiOutlineDelete style={{ fontSize: "40px" }} />
+                      <AiOutlineDelete style={{ fontSize: "30px" }} />
                       <span>Delete</span>
                     </div>
                   </BottomDiv>
@@ -73,13 +114,13 @@ const SingleAdd = () => {
   );
 };
 const Div = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 30px;
-`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 30px;
+`;
 const P = styled.p`
   padding-left: 30px;
   color: #fff;
@@ -119,6 +160,10 @@ const SingleAddDiv = styled.div`
       margin: 0;
       padding: 0;
     }
+  }
+  div h3 {
+    font-style: oblique;
+    color: goldenrod;
   }
 `;
 const BottomDiv = styled.div`

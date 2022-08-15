@@ -64,7 +64,7 @@ const addNewAdd = async (req, res) => {
       bedrooms: req.body.bedrooms,
       bathrooms: req.body.bathrooms,
       agency: req.body.agency,
-      center: req.body.center
+      center: req.body.center,
     };
     await db.collection("adds").insertOne(add);
     sendResponse(res, 201, add, "An add was created");
@@ -81,25 +81,12 @@ const updateAdd = async (req, res) => {
     await client.connect();
     const db = client.db(dbName);
 
-    const _id = parseInt(req.body.id);
-    const add = await db.collection("adds").findOne();
+    const _id = parseInt(req.body._id);
 
     const result = await db.collection("adds").findOneAndUpdate(
-      { _id: add._id },
+      { _id },
       {
-        $set: {
-          _id: req.body._id,
-          image: req.body.image,
-          price: req.body.price,
-          street: req.body.street,
-          city: req.body.city,
-          province: req.body.province,
-          postal_code: req.body.postal_code,
-          bedrooms: req.body.bedrooms,
-          bathrooms: req.body.bathrooms,
-          agency: req.body.agency,
-          center: req.body.center
-        },
+        $set: req.body,
       }
     );
     result.value

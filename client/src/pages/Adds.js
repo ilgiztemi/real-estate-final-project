@@ -76,7 +76,7 @@ const Adds = () => {
                         <div>
                           <TbBath
                             style={{
-                              fontSize: "40px",
+                              fontSize: "35px",
                             }}
                           />
                           <span>{el.bathrooms}</span>
@@ -101,7 +101,12 @@ const Adds = () => {
         )}
         {tabs === "add" && (
           <div>
-            <StyledForm onSubmit={(e) => {handleSubmitForm(e); tabsHandler("gallery")}}>
+            <StyledForm
+              onSubmit={(e) => {
+                handleSubmitForm(e);
+                tabsHandler("gallery");
+              }}
+            >
               <h1>Create An Add</h1>
               <div>
                 <input type="text" placeholder="Image url..." />
@@ -218,6 +223,10 @@ const SingleAddDiv = styled.div`
       padding: 0;
     }
   }
+  div h3 {
+    font-style: oblique;
+    color: goldenrod;
+  }
 `;
 const BottomDiv = styled.div`
   display: flex;
@@ -263,20 +272,20 @@ const StyledForm = styled.form`
       margin-left: 10px;
       color: azure;
     }
-  }  
+  }
   button {
-      line-height: 35px;
-      width: 90%;
-      margin: auto;
-      border: none;
-      border-radius: 10px;
-      background-color: #008080;
-      color: azure;
-      font-size: 20px;
-      &:hover {
-        cursor: pointer;
-        background-color: #40E0D0;
-      }
+    line-height: 35px;
+    width: 90%;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #008080;
+    color: azure;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: #40e0d0;
     }
-`
+  }
+`;
 export default Adds;

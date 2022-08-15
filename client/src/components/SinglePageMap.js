@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const mapStyle = {
@@ -14,7 +14,6 @@ const SinglePageMap = ({ center }) => {
   });
   return isLoaded ? (
     <GoogleMap mapContainerStyle={mapStyle} center={center} zoom={12}>
-      {/* Child components, such as markers, info windows, etc. */}
       <Marker position={center}></Marker>
     </GoogleMap>
   ) : (
