@@ -15,25 +15,6 @@ const Homepage = () => {
         <h1>FINAL</h1>
       </TopDiv>
       <SecondDiv>
-        <LeftDiv>
-          <h2>FOUNDER</h2>
-          <p>ILGIZ TEMI</p>
-          <img
-            src="https://images.pexels.com/photos/2529179/pexels-photo-2529179.jpeg?cs=srgb&dl=pexels-guillaume-meurice-2529179.jpg&fm=jpg"
-            alt="portrait"
-          />
-          <span>
-            <h3>WE DO IT</h3>
-            <h3>BETTER</h3>
-          </span>
-          <span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              pariatur quam quo illum repellendus rerum perferendis fuga
-              facilis, laboriosam amet.
-            </p>
-          </span>
-        </LeftDiv>
         <MainDiv>
           <AddsDiv>
             <div>
@@ -100,15 +81,18 @@ const Div = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 350px;
+  gap: 20px;
 `;
 const TopDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
   height: 300px;
-  overflow-y: scroll;
   h1 {
     color: lightskyblue;
     background-color: azure;
@@ -126,39 +110,6 @@ const SecondDiv = styled.div`
   height: 800px;
   margin-bottom: 20px;
   gap: 10px;
-`;
-const LeftDiv = styled.div`
-  color: #101010;
-  background-color: white;
-  border-radius: 5px;
-  flex-basis: 50%;
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  h2 {
-    border-bottom: 2px solid #101010;
-    padding-bottom: 30px;
-    width: 90%;
-    text-align: center;
-  }
-  p {
-    font-family: "Caveat", cursive;
-    font-size: 20px;
-  }
-  img {
-    width: 90%;
-    border-radius: 20px;
-    height: 300px;
-    object-fit: cover;
-  }
-  span {
-    background-color: #a7c7e7;
-    width: 100%;
-    text-align: center;
-    color: #101010;
-    margin-top: 20px;
-  }
 `;
 const AddsDiv = styled.div`
   display: flex;
@@ -204,13 +155,19 @@ const AddsDiv = styled.div`
 const MainDiv = styled.div`
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 `;
 const BottomDiv = styled.div`
   border-radius: 10px;
   margin-top: 25px;
   display: flex;
   flex-flow: row nowrap;
-  height: 400px;
+  height: 420px;
+  width: 100%;
+  max-width: 945px;
+  margin: auto;
   div {
     background-color: #6082b6;
     color: #fff;
@@ -221,8 +178,8 @@ const BottomDiv = styled.div`
     }
   }
   img {
-    flex-basis: 60%;
     width: 100%;
+    max-width: 500px;
     height: 100%;
   }
 `;

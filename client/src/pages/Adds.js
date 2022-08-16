@@ -191,6 +191,8 @@ const AddsDiv = styled.div`
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 320px;
+  gap: 5px;
 `;
 const SingleAddDiv = styled.div`
   margin: 0 auto;
@@ -247,6 +249,7 @@ const BottomDiv = styled.div`
 const StyledForm = styled.form`
   border: 1px solid lightblue;
   width: 80%;
+  margin-bottom: 600px;
   margin: 20px auto;
   display: flex;
   flex-flow: column nowrap;

@@ -7,7 +7,6 @@ const Profile = () => {
   if (isLoading) {
     return <Div>Loading ...</Div>;
   }
-  console.log(user);
   return (
     isAuthenticated && (
       <Div>
@@ -34,7 +33,7 @@ const Div = styled.div`
   display: flex;
   flex-flow: row wrap;
   height: 450px;
-  width: 70%;
+  width: 100%;
   max-width: 700px;
   margin: 20px auto;
   border: 2px solid skyblue;

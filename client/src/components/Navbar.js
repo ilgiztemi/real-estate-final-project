@@ -27,11 +27,13 @@ const Navbar = () => {
   );
 };
 const Div = styled.div`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #b6d0e2;
+  background-color: #a7c7e7;
   color: #f0ffff;
   h4 {
     &:hover {
