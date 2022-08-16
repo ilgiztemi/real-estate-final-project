@@ -33,9 +33,9 @@ const Div = styled.div`
   margin: 20px;
   display: flex;
   flex-flow: row wrap;
-  height: 380px;
+  height: 450px;
   width: 70%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 20px auto;
   border: 2px solid skyblue;
   background: whitesmoke;
@@ -44,11 +44,11 @@ const Div = styled.div`
     flex-basis: 50%;
     img {
       width: 100%;
-      height: 250px;
+      height: 300px;
     }
     h2,
     p {
-      padding-left: 10px;
+      padding-left: 20px;
     }
   }
 `;

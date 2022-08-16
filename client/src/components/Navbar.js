@@ -12,11 +12,11 @@ const Navbar = () => {
     <Div>
       {isAuthenticated && (
         <>
-          <h4 onClick={() => navigate("/about")}>ABOUT US</h4>
-          <h4 onClick={() => navigate("/adds")}>REAL ESTATE</h4>
-          <h4 onClick={() => navigate("/services")}>SERVICES</h4>
           <h4 onClick={() => navigate("/")}>HOMEPAGE</h4>
           <h4 onClick={() => navigate("/profile")}>PROFILE</h4>
+          <h4 onClick={() => navigate("/adds")}>REAL ESTATE</h4>
+          <h4 onClick={() => navigate("/services")}>SERVICES</h4>
+          <h4 onClick={() => navigate("/about")}>ABOUT US</h4>
         </>
       )}
 

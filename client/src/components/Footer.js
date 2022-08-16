@@ -15,7 +15,7 @@ const Footer = () => {
 const Div = styled.div`
   position: fixed;
   bottom: 0;
-  background-color: #7393b3;
+  background-color: #6F8FAF;
   width: 100%;
   height: 100px;
   color: whitesmoke;

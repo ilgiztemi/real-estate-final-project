@@ -158,7 +158,7 @@ const Adds = () => {
 };
 const P = styled.p`
   padding-left: 30px;
-  color: #fff;
+  color: white;
   font-size: 25px;
   font-style: italic;
 `;
@@ -169,7 +169,7 @@ const TopDiv = styled.div`
   align-items: center;
   gap: 10px;
   border: 1px solid white;
-  color: #fff;
+  color: #101010;
   padding-left: 10px;
   div {
     display: flex;
@@ -177,9 +177,12 @@ const TopDiv = styled.div`
     gap: 5px;
     cursor: pointer;
     padding: 5px;
+    background-color: white;
+    border-radius: 30px;
     &:hover {
-      background-color: aliceblue;
-      color: #101010;
+      background-color: lightblue;
+      color: white;
+      border-radius: 30px;
     }
   }
 `;
@@ -251,7 +254,7 @@ const StyledForm = styled.form`
   border-radius: 20px;
   padding: 10px;
   h1 {
-    color: antiquewhite;
+    color: #008080;
     text-align: center;
     font-weight: bold;
     text-shadow: 3px 3px 5px;
@@ -270,7 +273,8 @@ const StyledForm = styled.form`
     }
     label {
       margin-left: 10px;
-      color: azure;
+      color: #40e0d0;
+      font-weight: bolder;
     }
   }
   button {

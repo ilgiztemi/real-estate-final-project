@@ -110,8 +110,9 @@ const TopDiv = styled.div`
   height: 300px;
   overflow-y: scroll;
   h1 {
-    background-color: aliceblue;
-    opacity: 0.3;
+    color: lightskyblue;
+    background-color: azure;
+    opacity: 0.8;
     padding: 50px 200px;
     font-weight: bolder;
     border-radius: 10px;

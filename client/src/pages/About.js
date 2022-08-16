@@ -12,7 +12,7 @@ import styled from "styled-components";
 
 const About = () => {
   return (
-    <div>
+    <MainDiv>
       <h2>About us</h2>
       <FlexDiv>
         <div>
@@ -46,26 +46,65 @@ const About = () => {
           </IconDiv>
         </div>
       </FlexDiv>
-    </div>
+      <img src="https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="about-img" />
+    </MainDiv>
   );
 };
+const MainDiv = styled.div`
+  letter-spacing: 0;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  h2 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  img {
+    width: 80%;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+`
 const FlexDiv = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   div {
-    flex-basis: 48%;
+    flex-basis: 40%;
+    button {
+      border: none;
+      background-color: #101010;
+      color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    h4 span {
+      border-bottom: 1px solid #101010;
+    }
   }
 `
 const IconDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 30px;
-  width: 80%;
+  padding: 20px;
+  padding-left: 50px;
+  width: 60%;
   row-gap: 10px;
   background-color: #101010;
   color: #fff;
-  /* height: 80px; */
+  font-size: 25px;
+  height: 100px;
+  text-align: center;
 `
 export default About;
