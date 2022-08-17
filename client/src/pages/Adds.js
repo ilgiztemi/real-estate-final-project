@@ -45,7 +45,7 @@ const Adds = () => {
       </TopDiv>
       <>
         {tabs === "gallery" && (
-          <div>
+          <StyledDiv>
             <Pagination />
             <AddsDiv>
               {adds.slice(page * perPage, (page + 1) * perPage).map((el) => (
@@ -87,20 +87,20 @@ const Adds = () => {
                 </Link>
               ))}
             </AddsDiv>
-          </div>
+          </StyledDiv>
         )}
         {tabs === "maps" && (
-          <div>
+          <StyledDiv>
             <Map />
-          </div>
+          </StyledDiv>
         )}
         {tabs === "summary" && (
-          <div>
+          <StyledDiv>
             <h1>Summary</h1>
-          </div>
+          </StyledDiv>
         )}
         {tabs === "add" && (
-          <div>
+          <StyledDiv>
             <StyledForm
               onSubmit={(e) => {
                 handleSubmitForm(e);
@@ -150,7 +150,7 @@ const Adds = () => {
               </div>
               <button type="submit">SUBMIT</button>
             </StyledForm>
-          </div>
+          </StyledDiv>
         )}
       </>
     </div>
@@ -246,10 +246,14 @@ const BottomDiv = styled.div`
     }
   }
 `;
+const StyledDiv = styled.div`
+  margin-bottom: 100px;
+  height: 100vh;
+`
 const StyledForm = styled.form`
   border: 1px solid lightblue;
   width: 80%;
-  margin-bottom: 600px;
+  height: 500px;
   margin: 20px auto;
   display: flex;
   flex-flow: column nowrap;

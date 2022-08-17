@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Adds from "./pages/Adds";
-import Services from "./pages/Services";
+import Services from "./pages/Discover";
 import SingleAdd from "./pages/SingleAdd";
 
 function App() {

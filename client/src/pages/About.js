@@ -59,6 +59,7 @@ const MainDiv = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-bottom: 300px;
   h2 {
     font-weight: bold;
     font-size: 30px;
