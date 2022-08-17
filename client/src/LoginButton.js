@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const LoginButton = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
-
+    //this component is responsible for log in features of user athentification
     return (
         !isAuthenticated && (
             <Button onClick={() => loginWithRedirect()}>Sign In</Button>

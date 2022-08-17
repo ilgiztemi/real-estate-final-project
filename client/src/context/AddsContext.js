@@ -40,6 +40,7 @@ const reducer = (state, action) => {
 export const AddsContext = createContext();
 export const AddsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  //this hook is used to get all data from mongoDB database
   useEffect(() => {
     fetch("/api/adds")
       .then((res) => res.json())
@@ -51,6 +52,7 @@ export const AddsProvider = ({ children }) => {
       ...data,
     });
   };
+  //this function deletes an add based on id
   const deleteAnAdd = (_id) => {
     fetch("/api/delete", {
       method: "DELETE",
@@ -60,6 +62,7 @@ export const AddsProvider = ({ children }) => {
       body: JSON.stringify({ _id }),
     });
   };
+  //this function is used to update an add based on id
   const editAddFn = (data) => {
     dispatch({
       type: "edit-add",
@@ -75,6 +78,7 @@ export const AddsProvider = ({ children }) => {
       });
     }
   };
+  //this function handles tabs inside of adds components to switch between different features
   const tabsHandler = (data) => {
     dispatch({
       type: "tabs",
@@ -82,12 +86,14 @@ export const AddsProvider = ({ children }) => {
     });
     sessionStorage.setItem("tabs", data);
   };
+  //this function helps to change pages 
   const paginate = (index) => {
     dispatch({
       type: "page",
       index,
     });
   };
+  //this function helps to create a new add and it adds it to database up on  submitting it
   const handleSubmitForm = (e) => {
     e.preventDefault();
     fetch("/api/add/add", {
@@ -113,6 +119,7 @@ export const AddsProvider = ({ children }) => {
       }),
     });
   };
+  //this function helps to get and change values of the selected add and update it in mongoDB
   const handleEditInput = (property) => (event) => {
     dispatch({
       type: "handle-edit-input",

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
+  //this page shows user name and email from auth0 user athentification
   if (isLoading) {
     return <Div>Loading ...</Div>;
   }

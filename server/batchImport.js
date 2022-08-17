@@ -1,5 +1,5 @@
 "use strict";
-
+//this file is used only once to batch import data to mongoDB database
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 

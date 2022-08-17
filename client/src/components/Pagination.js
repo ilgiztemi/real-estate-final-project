@@ -12,7 +12,7 @@ const Pagination = () => {
   for (let i = 1; i < Math.ceil(total / perPage); i++) {
     number.push(i);
   }
-
+  //this component generates number of pages dynamically based on the number of adds i have on my database
   return (
     <Div>
       <ul>

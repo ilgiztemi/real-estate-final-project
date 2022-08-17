@@ -7,7 +7,7 @@ import { FiEdit } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
 import styled from "styled-components";
 import SinglePageMap from "../components/SinglePageMap";
-
+//this component shows big sized add with google map based on selected add address
 const SingleAdd = () => {
   const { add } = useParams();
   const navigate = useNavigate();

@@ -21,6 +21,7 @@ const Map = () => {
     id: "google-map-script",
     googleMapsApiKey: api_key,
   });
+  //this renders multiple locations of adds dynamically based on the data that is coming from mongoDV
   return isLoaded ? (
     <GoogleMap mapContainerStyle={mapStyle} center={center} zoom={11}>
       {adds.map((el) => (

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const LogoutButton = () => {
   const { logout, isAuthenticated } = useAuth0();
-
+  //this component is responsible for  log out button of user athentification
   return (
     isAuthenticated && (
       <Button onClick={() => logout({ returnTo: window.location.origin })}>

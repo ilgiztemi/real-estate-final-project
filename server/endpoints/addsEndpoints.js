@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+//this files consist of all endpoints for my handlers
 const {
   getAdds,
   getAdd,

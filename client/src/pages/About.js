@@ -11,6 +11,7 @@ import { SiTiktok, SiVivaldi } from "react-icons/si";
 import styled from "styled-components";
 
 const About = () => {
+  //about page with some paragraph and images
   return (
     <MainDiv>
       <h2>About us</h2>

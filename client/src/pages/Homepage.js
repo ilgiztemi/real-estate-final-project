@@ -9,6 +9,7 @@ const Homepage = () => {
   if (isAuthenticated) {
     navigate("/profile");
   }
+  //this page is visible both for users who signed in and for others
   return (
     <Div>
       <TopDiv>

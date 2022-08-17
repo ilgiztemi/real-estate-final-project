@@ -23,6 +23,7 @@ const Adds = () => {
     );
   }
   return (
+    //this is like navbar for main part of the page
     <div>
       <P>{adds.length} properties were found!</P>
       <TopDiv>
@@ -45,6 +46,7 @@ const Adds = () => {
       </TopDiv>
       <>
         {tabs === "gallery" && (
+          //gallery shows all adds with dynamic pagination feature
           <StyledDiv>
             <Pagination />
             <AddsDiv>
@@ -90,16 +92,19 @@ const Adds = () => {
           </StyledDiv>
         )}
         {tabs === "maps" && (
+          //maps shows a google map with dynamic location of all adds coming from data base
           <StyledDiv>
             <Map />
           </StyledDiv>
         )}
         {tabs === "summary" && (
+          //summary has nothing yet
           <StyledDiv>
             <h1>Summary</h1>
           </StyledDiv>
         )}
         {tabs === "add" && (
+          //add shows you a form where you can create a new add which will then saved in database and shown in the list of all adds
           <StyledDiv>
             <StyledForm
               onSubmit={(e) => {
@@ -249,7 +254,7 @@ const BottomDiv = styled.div`
 const StyledDiv = styled.div`
   margin-bottom: 100px;
   height: 100vh;
-`
+`;
 const StyledForm = styled.form`
   border: 1px solid lightblue;
   width: 80%;

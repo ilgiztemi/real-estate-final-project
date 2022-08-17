@@ -7,6 +7,7 @@ const mapStyle = {
   maxWidth: "800px",
   marginRight: "20px",
 };
+//this component show location of the selected add dynamically on google map
 const SinglePageMap = ({ center }) => {
   const api_key = process.env.REACT_APP_GOOGLE_MAP_API;
   const { isLoaded } = useJsApiLoader({

@@ -13,6 +13,7 @@ import {
 } from "react-icons/ti";
 
 const Footer = () => {
+  //simple footer page without any functionality expect for ui improvements
   return (
     <Div>
       <TopDiv>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Services = () => {
+const Discover = () => {
   return (<StyledDiv>
       <div>
         <a href="https://www.mtl.org/en/what-to-do/heritage-and-architecture/quartier-des-spectacles" target='_blank'>
@@ -62,4 +62,4 @@ const StyledDiv = styled.div`
     }
   }
 `
-export default Services;
+export default Discover;

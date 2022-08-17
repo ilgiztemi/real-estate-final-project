@@ -7,9 +7,9 @@ import styled from "styled-components";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Adds from "./pages/Adds";
-import Services from "./pages/Discover";
+import Discover from "./pages/Discover";
 import SingleAdd from "./pages/SingleAdd";
-
+//this component has multiple paths that were mainly used in this project
 function App() {
   return (
     <Main>
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
         <Route path="/adds" element={<Adds />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Discover />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/:add" element={<SingleAdd />} />
       </Routes>

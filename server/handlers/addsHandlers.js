@@ -11,7 +11,7 @@ const options = {
 const dbName = "real_estate";
 
 const { sendResponse } = require("./helperFunctions.js");
-
+//this function create api for importing all adds from mongoDB database
 const getAdds = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
   try {
@@ -28,7 +28,7 @@ const getAdds = async (req, res) => {
   }
   client.close();
 };
-
+//this function enables you to fetch a single add based on id
 const getAdd = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
 
@@ -47,6 +47,7 @@ const getAdd = async (req, res) => {
   }
   client.close();
 };
+//this function creates api functionality for adding a new add to database
 const addNewAdd = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
   try {
@@ -73,7 +74,7 @@ const addNewAdd = async (req, res) => {
   }
   client.close();
 };
-
+//this function enables you to create a new add and save it into mongoDB database
 const updateAdd = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
 
@@ -97,7 +98,7 @@ const updateAdd = async (req, res) => {
   }
   client.close();
 };
-
+//this function helps you to delete a single add based on its id in mongoDB
 const deleteAdd = async (req, res) => {
   const client = new MongoClient(MONGO_URI, options);
 
